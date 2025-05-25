@@ -1,12 +1,16 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Weather from "./components/Weather";
+import NotFound from "./components/NotFound";
 
-const App = () => {
+function App() {
   return (
-    <div className="app">
-      <Weather />
-    </div>
+    <Router basename="/weather-application">
+      <Routes>
+        <Route path="/" element={<Weather />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;

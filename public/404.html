@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page Not Found</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>404</h1>
+    <p>Oops! Page not found.</p>
+    <a href="/weather-application/">Go Back Home</a>
+
+    <script type="text/javascript">
+      // Redirect 404 requests to index.html so React Router can handle routing
+      window.location.replace("/weather-application/");
+    </script>
+  </body>
+</html>
